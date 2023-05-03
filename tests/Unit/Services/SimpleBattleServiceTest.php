@@ -4,7 +4,6 @@ namespace Tests\Unit\Services;
 
 use App\Exceptions\CannotDetermineStarterException;
 use App\Models\Contender;
-use App\Services\BattleConfiguration;
 use App\Services\Impl\SimpleBattleService;
 use Illuminate\Support\Collection;
 use Tests\TestCase;
@@ -26,7 +25,7 @@ class SimpleBattleServiceTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
-        $this->service = new SimpleBattleService(new BattleConfiguration());
+        $this->service = new SimpleBattleService();
     }
 
     public function getContender($overwrites = [])
